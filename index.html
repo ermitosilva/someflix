@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Someflix</title>
+    <style>
+        /* Resetando margens e preenchimentos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://jornerds.com/wp-content/uploads/2021/04/PicsArt_04-16-07.42.53-768x518.jpg'); /* Imagem de fundo personalizada */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            color: white;
+            background-attachment: fixed;
+        }
+
+        header {
+            text-align: center;
+            width: 100%;
+            z-index: 10;
+            position: absolute;
+            top: 5%; /* Ajustando o topo para mover o conteúdo para baixo */
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-style: italic;
+            text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7); /* Sombra mais forte e visível */
+            margin-bottom: 10px; /* Distância entre o título e o subtítulo */
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Link clicável */
+        .link-someflix {
+            text-decoration: none;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .link-someflix:hover {
+            text-decoration: underline;
+        }
+
+        .video-container {
+            margin-top: 200px; /* Aumentando o espaço superior para afastar os vídeos mais para baixo */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        iframe {
+            border: 4px solid #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Seção para o carrossel de vídeos */
+        .carousel-container {
+            position: relative;
+            margin-top: 50px; /* Aumentando o espaço superior entre o vídeo principal e o carrossel */
+            width: 80%; /* Largura do carrossel */
+            max-width: 800px; /* Máxima largura do carrossel */
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto; /* Centraliza o carrossel horizontalmente */
+        }
+
+        .carousel-content {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-content iframe {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 10px;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        /* Seção da Playlist */
+        .playlist-section {
+            margin-top: 100px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 80%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .playlist-section iframe {
+            margin: 15px;
+            border: 4px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SOMEFLIX: coisas que provavelmente você não sabia</h1> <!-- Título atualizado -->
+    </header>
+
+    <main>
+        <!-- Link clicável para a playlist -->
+        <a href="#playlist" class="link-someflix">#SOMEFLIX</a>
+
+        <div class="video-container">
+            <!-- Vídeo Principal -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XQdzHcjQusI?si=914UPYfAmMlPvw44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Carrossel de Vídeos -->
+        <div class="carousel-container">
+            <div class="carousel-content">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/A-ZFFX2vNPc?si=J7zDvFnPwdU3rdmK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AIaw8Ds_-q8?si=QhMy8h8zT8lXXiE5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NIJVpyZzanA?si=oAF9sN9CDNOb8t0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qPBcJaT33II?si=CVjmb1EJFSCJRSxd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SUFSiOnk2Zg?si=m-95m7IuqDozAoRd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Botões de navegação -->
+            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </main>
+
+    <!-- Seção da Playlist -->
+    <div class="playlist-section" id="playlist">
+        <h2>Playlist de Vídeos</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QpP_dKX_eiY?si=EMpWRi3Qz3uyZ2cj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const carousel = document.querySelector('.carousel-content');
+            const totalVideos = document.querySelectorAll('.carousel-content iframe').length;
+
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = totalVideos - 1; // Se estiver no primeiro, vai para o último
+            } else if (currentIndex >= totalVideos) {
+                currentIndex = 0; // Se estiver no último, vai para o primeiro
+            }
+
+            const offset = -currentIndex * (document.querySelector('.carousel-container').offsetWidth);
+            carousel.style.transform = `translateX(${offset}px)`;
+        }
+    </script>
+</body>
+</html>
